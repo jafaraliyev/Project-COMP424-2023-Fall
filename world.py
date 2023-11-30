@@ -233,8 +233,8 @@ class World:
                 )
             if not self.check_valid_step(cur_pos, next_pos, dir):
                 raise ValueError(
-                    "Not a valid step from {} to {} and put barrier at {}, with max steps = {}".format(
-                        cur_pos, next_pos, dir, self.max_step
+                    "Not a valid step from {} to {} and put barrier at {}, with max steps = {}, by {}".format(
+                        cur_pos, next_pos, dir, self.max_step, cur_player
                     )
                 )
         except BaseException as e:
