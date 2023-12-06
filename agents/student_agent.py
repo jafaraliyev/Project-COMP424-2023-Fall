@@ -54,7 +54,7 @@ class StudentAgent(Agent):
         return new_pos, self.dir_map[wall]
     
     def minimax(self, chess_board, my_pos, adv_pos, max_step, start_time, alpha, beta, maximizing_player, depth):
-        if ((time.time() - start_time) >= 1.97) or (self.sort_positions(chess_board, my_pos,adv_pos, max_step) == None) or self.sort_positions(chess_board, adv_pos, my_pos, max_step) == None or depth == 0:
+        if ((time.time() - start_time) >= 1.90) or (self.sort_positions(chess_board, my_pos,adv_pos, max_step) == None) or self.sort_positions(chess_board, adv_pos, my_pos, max_step) == None or depth == 0:
             return self.calculate_area_size(chess_board, my_pos, adv_pos), None, None
         self.prunning+=1
         if maximizing_player:
